@@ -189,7 +189,7 @@
     padding: 20px 0;
 }
 
-.grid-box .container {
+.grid-box .container-article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -209,7 +209,6 @@
 
 .grid-item img {
     width: 100%;
-    height: auto;
     margin-bottom: 10px;
 }
 
