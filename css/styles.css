@@ -3,76 +3,17 @@
     padding: 0;
 }
 
-/* Example media queries for responsive design */
-@media only screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .site-header {
-        padding: 10px;
-    }
-    
-    .footer-menu {
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .social-icons {
-        margin-top: 20px;
-        text-align: center;
-    }
-}
-
 /* Basic styling for header */
 
 .logoimg {
     width: 10%;
 }
-
-.category-links {
-    background-color: #F4F4F4;
-    padding: 10px 0;  
-    margin-top: 10px;
+.container-fluid {
+    background-color: rgb(255, 255, 255);
 }
-
-.category-links .container-links {
-    display: flex;
-    justify-content: center;
-}
-
-.category-links .category-menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.category-links .category-menu ul li {
-    display: inline;
-    margin-left: 20px;
-}
-
-.category-links .category-menu ul li:first-child {
-    margin-left: 0;
-}
-
-.category-links .category-menu ul li a {
-    color: #333;
-    text-decoration: none;
-}
-
-/* Media queries for responsiveness */
-@media only screen and (max-width: 768px) {
-    .category-links .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .category-links .category-menu ul li {
-        display: block;
-        margin: 10px 0;
+@media (max-width: 768px) {
+    .logoimg {
+        width: 25%;
     }
 }
 
@@ -81,8 +22,7 @@
 /* Article Writer Introduction Section */
 .article-writer {
     padding: 20px 0;
-    background-color: #f9f9f9;
-    margin-top: 10px;
+    background-color: #ffffff;
     width: 100%;
 }
 
@@ -114,6 +54,57 @@
     font-size: 16px;
 }
 
+@media (max-width: 768px) {
+    .writer-details p {
+        font-size: 13px;
+    }
+    .writer-details h3 { 
+        font-size: 17px;
+    }
+}
+
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust based on your design */
+    /* Adjust the gap between items */
+    margin: 10px 20px;
+}
+
+.grid-container a {
+    background-color: #dbd9d9;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+    border-top: solid 1px white;
+    border-left:  solid 1px white;
+}
+@media (max-width: 768px) {
+    .grid-container a {
+        padding: 8px;
+    }
+}
+
+.grid-item {
+    background-color: #f0f0f0;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        margin: 0 20px;
+         /* Adjust based on your design */
+    }
+}
+
+
+
+
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
     .article-writer .container {
@@ -128,7 +119,12 @@
     gap: 15px;
 }
 
-
+#carouselExampleControlsNoTouching {
+    margin: 5px 20px;   
+}
+.carousel-item img {
+    border-radius: 8px;
+}
 
 /* Category Heading Styles */
 .category-heading {
@@ -194,39 +190,36 @@
 }
 
 
-.line-bold {
-    border: solid 2px rgb(0, 0, 0);
-    margin: 50px auto;
-    
-}
-
 .site-footer {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
 }
 
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-sections {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-section {
-    width: 25%;
+    flex: 1;
+    padding: 0 15px;
+    margin-bottom: 20px;
 }
 
 .footer-section h3 {
-    font-size: 22px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .footer-section ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -235,19 +228,21 @@
 }
 
 .footer-section ul li a {
-    color: #000000;
+    color: #fff;
     text-decoration: none;
 }
 
 .footer-section ul li a:hover {
-    text-decoration: underline;
+    color: #ccc;
 }
 
-.privacy-policy a:hover {
-    text-decoration: underline;
-}
-@media only screen and (max-width: 768px) {
-    .footer-sections {
-        display: block;
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .footer-section {
+        flex-basis: 100%;
+        padding: 0;
+        text-align: center;
     }
 }
+
+
